@@ -1,19 +1,21 @@
 {
   "name": "nodejs-crud-api-project",
   "version": "1.0.0",
-  "description": "This is vanilla nodejs CRUD API project",
+  "description": "CRUD Costumes",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "nodemon server.js"
+    "dev": "nodemon server.js",
     "start": "node server.js"
   },
-  "author": "Dipesh Malvia",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.20"
+    "nodemon": "^3.1.7"
   },
   "dependencies": {
-    "dotenv": "^16.0.2"
+    "apollo-server": "^3.13.0",
+    "dotenv": "^16.4.5",
+    "graphql": "^16.9.0"
   }
 }

@@ -1,0 +1,79 @@
+[
+  {
+    "id": "213976be-9157-4daa-992b-5b93f68540a6",
+    "name": "Pirate Costume",
+    "year": "2023",
+    "category": "Historical",
+    "rating": "4.5",
+    "available": true,
+    "size": "M",
+    "rentalPrice": 15.99,
+    "description": "Classic pirate costume complete with hat, eye patch, and sword."
+  },
+  {
+    "id": "9017c8f4-3406-474a-a528-bac9da1675d8",
+    "name": "Superhero Costume",
+    "year": "2023",
+    "category": "Fantasy",
+    "rating": "4.7",
+    "available": false,
+    "size": "L",
+    "rentalPrice": 20,
+    "description": "Iconic superhero costume complete with cape, mask, and emblem."
+  },
+  {
+    "id": "e2fec764-7a7b-46d6-96d6-de9d3a6dec6b",
+    "name": "Vampire Costume",
+    "year": "2023",
+    "category": "Horror",
+    "rating": "4.2",
+    "available": true,
+    "size": "S",
+    "rentalPrice": 10.5,
+    "description": "Traditional vampire costume including cloak, fangs, and makeup kit."
+  },
+  {
+    "id": "3711087e-2863-427e-86d8-1548c3e7b0db",
+    "name": "Alien Costume",
+    "year": "2023",
+    "category": "Sci-Fi",
+    "rating": "4.3",
+    "available": true,
+    "size": "XL",
+    "rentalPrice": 18,
+    "description": "Futuristic alien costume with green skin suit and antenna headpiece."
+  },
+  {
+    "id": "131c8241-fcae-4425-94b7-e410fb285018",
+    "name": "Medieval Knight Costume",
+    "year": "2023",
+    "category": "Historical",
+    "rating": "4.8",
+    "available": false,
+    "size": "L",
+    "rentalPrice": 25,
+    "description": "Medieval knight costume complete with armor, shield, and sword."
+  },
+  {
+    "name": "new element",
+    "year": "2024",
+    "category": "Fantasy",
+    "rating": "5.0",
+    "available": true,
+    "size": "M",
+    "rentalPrice": 30,
+    "description": "A brand new fantasy costume.",
+    "id": "fe6b22d1-e0cc-4642-acfa-41905c039663"
+  },
+  {
+    "id": "88427a31-bb95-467d-8628-34e9568eabc1",
+    "name": "new updated",
+    "year": "2024",
+    "category": "Fantasy",
+    "rating": "5.0",
+    "available": true,
+    "size": "M",
+    "rentalPrice": 30,
+    "description": "A brand new fantasy costume."
+  }
+]

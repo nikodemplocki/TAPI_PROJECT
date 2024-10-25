@@ -1,4 +1,5 @@
 const writeToFile = require("../util/write-to-file");
+
 module.exports = (req, res) => {
   let baseUrl = req.url.substring(0, req.url.lastIndexOf("/") + 1);
   let id = req.url.split("/")[3];
@@ -7,31 +8,31 @@ module.exports = (req, res) => {
   );
 
   if (!regexV4.test(id)) {
-    res.writeHead(400, { "Content-Type": "application/json" });
+    res.writeHead(400, { "Content-Type": "application/json" }); // Zadanie 1.3 Poprawnie użycie kodów HTTP
     res.end(
       JSON.stringify({
         title: "Validation Failed",
         message: "UUID is not valid",
       })
     );
-  } else if (baseUrl === "/api/movies/" && regexV4.test(id)) {
-    const index = req.movies.findIndex((movie) => {
-      return movie.id === id;
+  } else if (baseUrl === "/api/costumes/" && regexV4.test(id)) { // Zadanie 1.1 Stworzenie routów dla resourców
+    const index = req.costumes.findIndex((costume) => {
+      return costume.id === id;
     });
     if (index === -1) {
-      res.statusCode = 404;
+      res.statusCode = 404; // Zadanie 1.3 Poprawnie użycie kodów HTTP
       res.write(
-        JSON.stringify({ title: "Not Found", message: "Movie not found" })
+        JSON.stringify({ title: "Not Found", message: "Costume not found" })
       );
       res.end();
     } else {
-      req.movies.splice(index, 1);
-      writeToFile(req.movies);
-      res.writeHead(204, { "Content-Type": "application/json" });
-      res.end(JSON.stringify(req.movies));
+      req.costumes.splice(index, 1);
+      writeToFile(req.costumes);
+      res.writeHead(204, { "Content-Type": "application/json" }); // Zadanie 1.3 Poprawnie użycie kodów HTTP
+      res.end();
     }
   } else {
-    res.writeHead(404, { "Content-Type": "application/json" });
+    res.writeHead(404, { "Content-Type": "application/json" }); // Zadanie 1.3 Poprawnie użycie kodów HTTP
     res.end(JSON.stringify({ title: "Not Found", message: "Route not found" }));
   }
 };
