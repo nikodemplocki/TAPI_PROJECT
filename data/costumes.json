@@ -64,16 +64,5 @@
     "rentalPrice": 30,
     "description": "A brand new fantasy costume.",
     "id": "fe6b22d1-e0cc-4642-acfa-41905c039663"
-  },
-  {
-    "id": "88427a31-bb95-467d-8628-34e9568eabc1",
-    "name": "new updated",
-    "year": "2024",
-    "category": "Fantasy",
-    "rating": "5.0",
-    "available": true,
-    "size": "M",
-    "rentalPrice": 30,
-    "description": "A brand new fantasy costume."
   }
 ]

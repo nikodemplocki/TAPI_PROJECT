@@ -1,0 +1,35 @@
+// zadanie 3.1 Przygotowanie plików .proto z definicjami
+syntax = "proto3";
+
+package costumes;
+
+message Costume {
+  string id = 1;                 
+  string name = 2;               
+  string year = 3;               
+  string category = 4;           
+  string rating = 5;             
+  bool available = 6;            
+  string size = 7;               
+  float rentalPrice = 8;         
+  string description = 9;        
+}
+
+service CostumeService {
+  // zadanie 3.2 Implementacja resolverów serwisów opisanych w pliku .proto
+  rpc GetCostumes (Empty) returns (CostumeList); 
+  rpc GetCostume (CostumeId) returns (Costume);  
+  rpc CreateCostume (Costume) returns (Costume); 
+  rpc UpdateCostume (Costume) returns (Costume); 
+  rpc DeleteCostume (CostumeId) returns (Empty); 
+}
+
+message CostumeId {
+  string id = 1; 
+}
+
+message CostumeList {
+  repeated Costume costumes = 1; 
+}
+
+message Empty {} 

@@ -1,10 +1,10 @@
-const costumesData = require('../data/costumes.json'); // Załaduj dane kostiumów
+const costumesData = require('../data/costumes.json');
 const crypto = require("crypto");
 
 const resolvers = {
   Query: {
-    costumes: () => costumesData, // Pobierz wszystkie kostiumy
-    costume: (_, { id }) => costumesData.find(costume => costume.id === id), // Pobierz kostium po ID
+    costumes: () => costumesData, 
+    costume: (_, { id }) => costumesData.find(costume => costume.id === id), 
   },
   Mutation: {
     addCostume: (_, { name, year, category, rating, available, size, rentalPrice, description }) => {
@@ -19,21 +19,21 @@ const resolvers = {
         rentalPrice,
         description,
       };
-      costumesData.push(newCostume); // Dodaj nowy kostium do bazy danych
+      costumesData.push(newCostume); // dodawawnie
       return newCostume;
     },
     updateCostume: (_, { id, ...rest }) => {
       const index = costumesData.findIndex(costume => costume.id === id);
       if (index === -1) return null;
       const updatedCostume = { ...costumesData[index], ...rest };
-      costumesData[index] = updatedCostume; // Zaktualizuj kostium
+      costumesData[index] = updatedCostume; // aktualizacja
       return updatedCostume;
     },
     deleteCostume: (_, { id }) => {
       const index = costumesData.findIndex(costume => costume.id === id);
       if (index === -1) return null;
       const deletedCostume = costumesData[index];
-      costumesData.splice(index, 1); // Usuń kostium
+      costumesData.splice(index, 1); // usuwanie
       return deletedCostume;
     },
   },
